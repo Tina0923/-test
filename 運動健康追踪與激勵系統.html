@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>運動健康追踪與激勵系統</title>
+</head>
+<body>
+    <h1>運動健康追踪與激勵系統</h1>
+    <form id="loginForm">
+        <label for="username">姓名:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="idNumber">身分證號:</label>
+        <input type="text" id="idNumber" name="idNumber"><br><br>
+        <label for="birthday">生日:</label>
+        <input type="text" id="birthday" name="birthday"><br><br>
+        <button type="submit">登入</button>
+    </form>
+    <div id="content" style="display: none;">
+        <a href="trackExercise.html">運動數據追踪</a><br>
+        <a href="personalizedSuggestions.html">個性化建議</a><br>
+        <a href="rewards.html">獎勵機制</a><br>
+        <a href="community.html">社群互動</a><br>
+        <a href="healthReport.html">健康報告</a><br>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // 阻止表單提交
+            var username = document.getElementById('username').value;
+            var idNumber = document.getElementById('idNumber').value;
+            var birthday = document.getElementById('birthday').value;
+            
+            // 假設這裡是登入驗證的代碼
+            if (username === 'your_username' && idNumber === 'your_idNumber' && birthday === 'your_birthday') {
+                // 登入成功，顯示主頁面內容
+                document.getElementById('content').style.display = 'block';
+            } else {
+                alert('登入失敗，請檢查輸入的信息');
+            }
+        });
+    </script>
+</body>
+</html>
